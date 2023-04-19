@@ -1,0 +1,378 @@
+body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,dl,dd,ol,ul,fieldset,legend,figure,menu{margin:0;padding:0;border:0}
+table,th,td{border-spacing:0;border-collapse:collapse}
+ol,ul,li{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:normal}
+body,input,textarea,keygen,select,button{font:normal 12px/1.2 'Open Sans','Noto Sans',sans-serif}
+input,textarea,select,button{margin:0;padding:0;border-radius:0;color:#333;outline:0;vertical-align:middle}
+a:link,a:visited,a:hover,a:active{text-decoration:none}
+a,button,input[type='submit'],input[type='button'],input[type='reset']{border:0;background:transparent;cursor:pointer}
+body{
+    width:100%;
+    height:2100px;
+    background-color: #0f0f0f;
+}
+.nav_wrap{
+    width:100%;
+    height:170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    width:1460px;
+    height:170px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+}
+/*로고박스 */
+.logo{
+    width:160px;
+    height:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    margin-left:56px;
+}
+.logo:hover{
+    transform: rotate(180deg);
+    transition: all 0.5s ease;
+}
+.logo:not(:hover){
+    transform: rotate(0deg);
+    transition: all 0.5s ease;
+}
+.logo_text{
+    color:#efefef;
+    font-size: 55px;
+    font-weight: bolder;
+}
+/*헤더 메인 메뉴 X*/
+.header .main-menu{
+    width: 780px;
+    height:70px;
+    margin-left: 650px;
+    margin-right: 50px;
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.has-menu{
+    position: relative;
+    list-style-type: none;
+    display:flex;
+}
+.menu_text{
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 23px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    width:100px;
+    height:70px;
+    /*display: block;*/
+}
+.menu_text1{
+    width:150px;
+    height:70px;
+    margin-top: 20px;
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    list-style-type: none;
+}
+.menu_text:hover{
+    text-decoration: none;
+    color:rgb(99, 99, 99);
+    font-size: 24px;
+    transition: all 0.5s;
+}
+.menu_text1:hover{
+    text-decoration: none;
+    color:rgb(99, 99, 99);
+    font-size: 24px;
+    transition: all 0.5s;
+}
+/* 서브메뉴 */
+.sub-menu{
+    width: 200px;   
+    height: 140px;
+    text-shadow: #000000;
+    position: absolute;
+    top: 3.5rem;
+    background: #000000;
+    list-style-type: none;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* 서브메뉴 안의 텍스트 */
+.sub-menu a{
+    margin-top: 10px;
+    margin-left:20px;
+    width:120px;
+    color:rgb(255, 255, 255);
+    text-shadow: #000000;
+    line-height: 200%;
+    /*background-color: aqua;*/
+    display: inline-block;
+}
+.has-menu > a::after {  /* ::->가상요소 a태그 이후에 나타날 수 있는 요소적인 부분 */
+    /* font-family: url(../fonts/Black_Han_Sans/BlackHanSans-Regular.ttf); */
+    font-weight: 900;
+    margin-left:.5rem;
+}
+/* 보통 때에는 서브 메뉴를 숨김 */
+.has-menu .sub-menu{
+    display: none;
+}
+/* 커서를 갖다 대면 서브 메뉴가 보이도록 설정 */
+.has-menu:hover .sub-menu{
+    display: block;
+}
+.dots{
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: rgb(206, 206, 206);
+    display: inline-block;
+}
+.dots_box{
+    display: flex;
+    width: 130px;
+    height:15px;
+    margin-left: 750px;
+    justify-content: space-between;
+    background-color: blue;
+
+}
+.footer{
+    width:100%;
+    height:150px;
+    background-color: rgba(31, 31, 31, 0.6);
+}
+/* 여기까지 공통 부분 */
+.section01{
+    width:90%;
+    margin-left: 85px;
+    /* height:1050px; */
+    /*background-color: rgb(57, 57, 57);*/
+}
+.big_typo{
+    font-size: 90px;
+    color:#d7d7d7;
+    float:left;
+    z-index: 56;
+}
+/*카테고리 태그 영역 Game/play*/
+.section01 .category_box{
+width:500px;
+height:80px;
+margin-top: 100px;
+margin-left: 172px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+/* background-color: aqua; */
+z-index: 1px;
+font-size: 16px;
+}
+.category_box .category01{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width:125px;
+    height:38px;
+    border-radius: 50px;
+    border: 2px solid #727272;
+    text-align: center;
+    color: aliceblue;
+}
+.category_box .category02{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width:150px;
+    height:38px;
+border-radius: 50px;
+border: 2px solid #727272;
+text-align: center;
+color: aliceblue;
+}
+.category_box .category03{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+width: 103px;
+height:38px;
+border-radius: 50px;
+border: 2px solid #727272;
+text-align: center;
+color: aliceblue;
+}
+/*태그영역 gameplay/movieposters/playlists 태그. */
+.tag{
+    text-decoration: none;
+    color: aliceblue;
+}   
+.tag_span:hover{
+    /* 얼마나 움직이는지 */
+    padding-right: 10px;
+    color:#333;
+}  
+.tag_span1:hover{
+    /* 얼마나 움직이는지 */
+    padding-right: 10px;
+    color:#333;
+}  
+.tag_span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.tag_span1{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.tag_span:after{
+    content:'\00bb';
+    font-size: 40px;
+    color:#ffffff;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0.9;
+    top:-18px;
+    right:-30px;
+    transition: 0.5s;
+}
+.tag_span1:after{
+    content:'\00bb';
+    font-size: 40px;
+    color:#ffffff;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0.9;
+    top:-18px;
+    right:-30px;
+    transition: 0.5s;
+}
+/*태그 영역 부분 End*/
+.h2{
+    color: #ffffff;
+    font-size: 120px;
+    font-weight: bold;
+    margin-left: 172px;
+    margin-bottom: 70px;
+    margin-top: 90px;
+    /* background-color: aquamarine; */
+}
+.h2_1{
+    width: 600px;
+    height:50px;
+    text-align: center;
+    color: #ffffff;
+    font-size:23px;
+    font-weight:300;
+    margin: 0 auto;
+    margin-top: 200px;
+    /* background-color: rgb(190, 141, 77); */
+    animation-timing-function: linear;
+    animation-name: h2_1;
+    animation-duration:1s;
+    animation-iteration-count:5;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(0.57, 0.3, 0.15, 0.4);
+    /* background-color: aquamarine; */
+}
+@keyframes h2_1{
+    from{
+        margin-top:170px;
+    }
+
+    to{
+        margin-Top:250px;
+    }
+}
+.explain_txt{
+    width:1400px;
+    height: 80px;
+    margin-left: 172px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 150%;
+    color:#ffffff;
+    /* background-color: lightblue; */
+}
+/*메인 페이지 갤러리 사진 */
+.gallery{
+    text-align:center;
+    width:1400px;
+    height:930px;
+    margin: 170px 0 20px 172px;
+    font-size: 25px;
+    color:#d7d7d7;
+    display: inline-block;
+}
+.gallery1{
+    display: inline-block;
+    width:550px;
+    height:330px;
+    opacity: 0.5;
+}
+.gallery1:hover{
+    opacity:1;
+}
+    .section01_img{
+    display: flex;
+    width:810px;
+    height:980px;
+    margin-left:20px;
+    /* section01의 높이 값을 기준으로 측정합니다. */
+    height:1000px;
+    opacity:1;
+}
+    .section01_img2{
+        float:left;
+        width:530px;
+        margin-left:20px;
+        /* section01의 높이 값을 기준으로 측정합니다. */
+        height:480px;
+        opacity: 1;
+}
+.section01_img3{
+    float:left;
+    width:530px;
+    margin-left:20px;
+    margin-top: 20px;
+    /* section01의 높이 값을 기준으로 측정합니다.*/
+    height:500px;
+    opacity: 1;
+}
+
+/* section01 영역 End*/
+.clear{clear:both; height:0; overflow: hidden;}
+#footer{
+    color:#424242;
+    font-size:15px;
+    display:flex;
+    width:100%;
+    position: relative;
+    height:100px;
+    text-align: center;
+    padding-top:300px;
+    padding-left:700px ;
+    line-height: 150%;
+    background-color: #0f0f0f;
+}
